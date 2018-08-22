@@ -17,8 +17,10 @@
     <title>Demo Page for Lab 3</title>
 </head>
 
-<body> 
+<body>
     <div id="fakeLoader"></div>
+    </div>
+    </div>
     <header>
         <div class="pos-f-t">
             <div class="collapse" id="navbarToggleExternalContent">
@@ -27,7 +29,8 @@
                     <span class="text-muted">The following plugins are integrated into this web Page
                         <ul>
                             <li>Plugin 1: ScrollReveal - Load the content one by one with delay</li>
-                            <li>Plugin 2: </li>
+                            <li>Plugin 2: fakLoader - The name said it all</li>
+                            <li>Plugin 3: Typejs - Typing effect</li>
                         </ul>
                     </span>
                 </div>
@@ -51,7 +54,11 @@
                     <img class="d-block w-100" src="./img/1.jpg" alt="First slide">
                     <div class="carousel-caption d-none d-md-block">
                         <h5>So you think you can dance?</h5>
-                        <p>Ok lah~</p>
+                        <div id="typed-strings">
+                            <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+                            <p>It <em>types</em> out sentences.</p>
+                        </div>
+                        <span id="element1"></span>
                     </div>
                 </div>
                 <div class="carousel-item">
@@ -79,15 +86,16 @@
             </a>
         </div>
     </header>
+
     <section>
         <div class="dummy container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum, ligula vel varius maximus, elit tellus
-                efficitur turpis, vitae imperdiet erat odio ac nisi. Duis laoreet euismod pharetra. Ut suscipit pharetra
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum, ligula vel varius maximus, elit
+                tellus efficitur turpis, vitae imperdiet erat odio ac nisi. Duis laoreet euismod pharetra. Ut suscipit pharetra
                 urna nec vehicula. Maecenas at enim fermentum, dignissim massa sit amet, aliquet velit. Ut ultrices ultricies
                 ornare. Fusce id ligula id velit porta congue non eget arcu. Vivamus id vehicula sapien, nec viverra nisl.
                 <br/>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum, ligula vel varius maximus, elit
-                    tellus efficitur turpis, vitae imperdiet erat odio ac nisi. Duis laoreet euismod pharetra. Ut suscipit
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum, ligula vel varius maximus,
+                    elit tellus efficitur turpis, vitae imperdiet erat odio ac nisi. Duis laoreet euismod pharetra. Ut suscipit
                     pharetra urna nec vehicula. Maecenas at enim fermentum, dignissim massa sit amet, aliquet velit. Ut ultrices
                     ultricies ornare. Fusce id ligula id velit porta congue non eget arcu. Vivamus id vehicula sapien, nec
                     viverra nisl.
@@ -98,11 +106,11 @@
                         velit. Ut ultrices ultricies ornare. Fusce id ligula id velit porta congue non eget arcu. Vivamus
                         id vehicula sapien, nec viverra nisl.
                         <br/>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum, ligula vel varius maximus,
-                            elit tellus efficitur turpis, vitae imperdiet erat odio ac nisi. Duis laoreet euismod pharetra.
-                            Ut suscipit pharetra urna nec vehicula. Maecenas at enim fermentum, dignissim massa sit amet,
-                            aliquet velit. Ut ultrices ultricies ornare. Fusce id ligula id velit porta congue non eget arcu.
-                            Vivamus id vehicula sapien, nec viverra nisl.
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla condimentum, ligula vel varius
+                            maximus, elit tellus efficitur turpis, vitae imperdiet erat odio ac nisi. Duis laoreet euismod
+                            pharetra. Ut suscipit pharetra urna nec vehicula. Maecenas at enim fermentum, dignissim massa
+                            sit amet, aliquet velit. Ut ultrices ultricies ornare. Fusce id ligula id velit porta congue
+                            non eget arcu. Vivamus id vehicula sapien, nec viverra nisl.
                             <br/>
         </div>
     </section>
@@ -117,8 +125,8 @@
                     <img class="card-img-top" src="./img/card1.jpg" alt="Card image cap">
                     <div class="card-body">
                         <h5 class="card-title">Card title that wraps to a new line</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This
-                            content is a little bit longer.</p>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+                            content. This content is a little bit longer.</p>
                         <a href="#" class="btn btn-primary">Go somewhere</a>
                     </div>
 
@@ -182,8 +190,8 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This
-                            card has even longer content than the first to show that equal height action.</p>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                            content. This card has even longer content than the first to show that equal height action.</p>
                         <p class="card-text">
                             <small class="text-muted">Last updated 3 mins ago</small>
                         </p>
@@ -192,7 +200,13 @@
             </div>
         </div>
     </section>
-    <footer></footer>
+    <footer>
+        <button onclick="toast({
+            type: 'success',
+            title: 'Signed in successfully'
+        })">CLICK ME!</button>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
@@ -201,13 +215,42 @@
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script> html
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery.fakeloader@1.0.0/dist/jquery.fakeloader.min.js"></script>
-    <script> 
-    $("#fakeLoader").fakeLoader();
-    ScrollReveal().reveal('.container', { delay: 600, duration: 1200 }); 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.11/dist/sweetalert2.all.min.js"></script> ‭
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <script>   
+        //Fake loader
+        $("#fakeLoader").fakeLoader({
+
+            timeToHide: 1200, //Time in milliseconds for fakeLoader disappear
+            zIndex: "999",//Default zIndex
+            spinner: "spinner2",//Options: 'spinner1', 'spinner2', 'spinner3', 'spinner4', 'spinner5', 'spinner6', 'spinner7'
+            bgColor: "#2ecc71", //Hex, RGB or RGBA colors
+        });
+
+        ScrollReveal().reveal('.container', { delay: 600, duration: 1200 });
+
+        //type.js
+
+        var typed = new Typed('#element1', {
+            stringsElement: '#typed-strings'
+        });
+
+        //sweetalert2
+        var toast = swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000
+        });
+        
+        //
+
+
     </script>
-    
+
 </body>
 
 </html>
